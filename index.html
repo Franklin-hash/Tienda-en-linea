@@ -5,6 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProyectoFinal</title>
     <link rel="stylesheet" href="style.css">
+
+<script>
+    let carrito = [];
+let total = 0;
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre: nombre, precio: precio });
+    total += precio;
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const listaCarrito = document.getElementById('lista-carrito');
+    const totalCarrito = document.getElementById('total-carrito');
+
+    listaCarrito.innerHTML = ''; // Limpiar la lista
+    carrito.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item.nombre + ' - $' + item.precio.toFixed(2);
+        listaCarrito.appendChild(li);
+    });
+
+    totalCarrito.textContent = total.toFixed(2);
+}
+
+function finalizarCompra() {
+    alert('Compra finalizada. Total: $' + total.toFixed(2));
+    // Aquí iría la lógica para enviar los datos a un servidor y procesar el pago
+    carrito = [];
+    total = 0;
+    actualizarCarrito();
+}
+
+document.getElementById('formulario-contacto').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // Aquí puedes enviar los datos a tu servidor usando AJAX o Fetch API
+    console.log('Nombre:', nombre);
+    console.log('Email:', email);
+    console.log('Mensaje:', mensaje);
+
+    alert('Mensaje enviado. Gracias por contactarnos.');
+
+    // Limpiar el formulario
+    document.getElementById('nombre').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('mensaje').value = '';
+});
+
+</script>
+
+    <style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+section {
+    padding: 2em;
+    margin: 1em;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.producto {
+    display: inline-block;
+    width: 300px;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.precio {
+    font-weight: bold;
+    color: green;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+}
+
+#formulario-contacto label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#formulario-contacto input[type="text"],
+#formulario-contacto input[type="email"],
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#formulario-contacto button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#carrito {
+    text-align: center;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    margin: 0.5em 0;
+}
+
+    </style>
 </head>
 <body>
 
@@ -135,4 +284,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
