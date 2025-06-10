@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda en Línea</title>
+    <title>ProyectoFinal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Mi Tienda</h1>
+        <h1>Zapateria maria</h1>
+        <img src="https://img.freepik.com/vector-premium/zapatos-icono-logo-vector-ilustracion-diseno_598213-4331.jpg?semt=ais_hybrid&w=740" alt="logo" style=  'height: 120px;'  width='150px';>
         <nav>
             <a href="#quienes-somos">Quiénes Somos</a>
             <a href="#catalogo">Catálogo</a>
@@ -23,34 +24,78 @@
         <h3>Misión</h3>
         <p>Nuestra misión es ofrecer productos de alta calidad y un servicio excepcional a nuestros clientes.</p>
         <h3>Visión</h3>
-        <p>Ser la tienda en línea líder en [tu nicho de mercado], reconocida por su innovación y compromiso con la satisfacción del cliente.</p>
+        <p>Ser la tienda en línea líder en zapatos, reconocida por su innovación y compromiso con la satisfacción del cliente.</p>
         <h3>Descripción del Negocio</h3>
-        <p>Somos una empresa dedicada a la venta de [tipo de productos/servicios]. Trabajamos con marcas reconocidas como [Marca 1], [Marca 2], y [Marca 3].</p>
+        <p>Somos una empresa dedicada a la venta de zapatos. Trabajamos con marcas reconocidas como Jordan, Adidas, Puma, Nike, Reeebok.</p>
     </section>
 
     <section id="catalogo">
         <h2>Catálogo de Productos</h2>
 
         <div class="producto">
-            <img src="imagen1.jpg" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <p>Descripción del Producto 1.  Este producto es ideal para...</p>
-            <p class="precio">$25.00</p>
-            <button onclick="agregarAlCarrito('Producto 1', 25.00)">Agregar al Carrito</button>
+            <img src="https://cdn.pacifiko.com/image/cache/catalog/p/YWM1NDc4M2-500x500.jpg" alt="Producto 1">
+            <p>Jordan Mens Air 1 Retro High OG DZ5485 612 Chicago Lost Found - Size 7.5, Varsity Red/Black-sail-muslin</p>
+            <p class="precio">$600.00</p>
+            <button onclick="agregarAlCarrito('Jordan Mens Air 1', 200.00)">Agregar al Carrito</button>
         </div>
 
         <div class="producto">
-            <img src="imagen2.jpg" alt="Producto 2">
-            <h3>Producto 2</h3>
-            <p>Descripción del Producto 2.  Perfecto para...</p>
-            <p class="precio">$40.00</p>
-            <button onclick="agregarAlCarrito('Producto 2', 40.00)">Agregar al Carrito</button>
+            <img src="https://meatpack.com/cdn/shop/files/JQ3015_288x288.jpg?v=1748880778" alt="Producto 2">
+            <p>SAMBA UNISEX JQ3015</p>
+            <p class="precio">$200.00</p>
+            <button onclick="agregarAlCarrito('SAMBA UNISEX JQ3015', 200.00)">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://meatpack.com/cdn/shop/files/JI3523_288x288.jpg?v=1748879642" alt="Producto 3">
+            <p>GAZELLE UNISEX JI3523</p>
+            <p class="precio">$400.00</p>
+            <button onclick="agregarAlCarrito('GAZELLE UNISEX JI3523', 400.00)">Agregar al Carrito</button>
+        </div>
+                <div class="producto">
+            <img src="https://meatpack.com/cdn/shop/files/JH5100_288x288.jpg?v=1748876149" alt="Producto 4">
+            <p>SL 72 HOMBRE JH5100</p>
+            <p class="precio">$125.00</p>
+            <button onclick="agregarAlCarrito('SL 72 HOMBRE JH5100', 125.00)">Agregar al Carrito</button>
+        </div>
+                <div class="producto">
+            <img src="https://urbanoshoes.com.gt/wp-content/uploads/2025/05/PUMAII00610-400x400.jpg" alt="Producto 5">
+            <p>Puma Shuffle 309668 39</p>
+            <p class="precio">$50.00</p>
+            <button onclick="agregarAlCarrito('Puma Shuffle 309668 39', 50.00)">Agregar al Carrito</button>
+        </div>
+                <div class="producto">
+            <img src="https://urbanoshoes.com.gt/wp-content/uploads/2025/05/PUMAII00311-400x400.jpg" alt="Producto 6">
+            <p>Puma Caven 380810 10</p>
+            <p class="precio">$35.00</p>
+            <button onclick="agregarAlCarrito('Puma Caven 380810 10', 35.00)">Agregar al Carrito</button>
+        </div>
+                <div class="producto">
+            <img src="https://meatpack.com/cdn/shop/files/CZ1055-100_288x288.jpg?v=1741499590" alt="Producto 7">
+            <p>W BLAZER MID 77 MUJER CZ1055-100</p>
+            <p class="precio">$100.00</p>
+            <button onclick="agregarAlCarrito('W BLAZER MID 77 MUJER CZ1055-100', 100.00)">Agregar al Carrito</button>
+        </div>
+                <div class="producto">
+            <img src="https://emporium.com.gt/wp-content/uploads/rdi/sneakers-negro-estilo-100209319-marca-reebok-cl-sico-165110-363876_1.jpg" alt="Producto 8">
+            <p>Sneakers negro Estilo 100209319 marca Reebok clásico | 165110 DW</p>
+            <p class="precio">$110.00</p>
+            <button onclick="agregarAlCarrito('neakers negro Estilo 100209319 marca Reebok clásico', 110.00)">Agregar al Carrito</button>
         </div>
 
         <!-- Más productos aquí -->
     </section>
 
-    <section id="carrito">
+    <form id="carrito">
+        <section id="carrito"></section>
+        
+        <label for="nombre">Nombre</label>
+        <Input type="text" id="nombre" name="nombre"required><br>
+        
+        <label for="email"> Email</label>
+        <input type="text" id="Email" name="email" required>
+        
+            
         <h2>Carrito de Compras</h2>
         <ul id="lista-carrito">
             <!-- Los productos agregados aparecerán aquí -->
@@ -58,11 +103,13 @@
         <p>Total: $<span id="total-carrito">0.00</span></p>
         <button onclick="finalizarCompra()">Finalizar Compra</button>
     </section>
+    </form>
+
 
     <section id="contacto">
         <h2>Contáctenos</h2>
-        <p>Teléfono: +52 55 1234 5678</p>
-        <p>Email: info@mitienda.com</p>
+        <p>Teléfono: +502 8941-5623</p>
+        <p>Email: ZapateriaMaria@mitienda.com</p>
 
         <form id="formulario-contacto">
             <label for="nombre">Nombre:</label>
@@ -88,3 +135,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
